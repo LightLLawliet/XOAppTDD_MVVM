@@ -48,12 +48,12 @@ class MainViewModelTest {
             CellUi.X(CellId.BottomRight),
             communicationUpdate.value
         )
-        assertEquals(5, communicationResult.count)
-        assertEquals(5, communicationUpdate.count)
+        assertEquals(6, communicationResult.count)
+        assertEquals(6, communicationUpdate.count)
 
         viewModel.tap(CellId.BottomLeft)
-        assertEquals(5, communicationResult.count)
-        assertEquals(5, communicationUpdate.count)
+        assertEquals(6, communicationResult.count)
+        assertEquals(6, communicationUpdate.count)
     }
 
     @Test
@@ -65,16 +65,16 @@ class MainViewModelTest {
 
         viewModel.tap(CellId.UpLeft)
         assertEquals("Player B, go!", communicationResult.text)
-        assertEquals(1, communicationResult.count)
+        assertEquals(2, communicationResult.count)
         assertEquals(
             CellUi.X(CellId.UpLeft),
             communicationUpdate.value
         )
-        assertEquals(1, communicationUpdate.count)
+        assertEquals(2, communicationUpdate.count)
 
         viewModel.tap(CellId.UpLeft)
-        assertEquals(1, communicationResult.count)
-        assertEquals(1, communicationUpdate.count)
+        assertEquals(2, communicationResult.count)
+        assertEquals(2, communicationUpdate.count)
     }
 
     class TestCommunication : ResultCommunication {
