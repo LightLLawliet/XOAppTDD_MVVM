@@ -2,6 +2,8 @@ package com.example.xoapptdd_mvvm
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
+import com.example.xoapptdd_mvvm.data.*
+import com.example.xoapptdd_mvvm.presentation.MainViewModel
 import org.junit.Assert.assertEquals
 import org.junit.Test
 

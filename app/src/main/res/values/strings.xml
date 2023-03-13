@@ -4,4 +4,9 @@
     <string name="new_game">New game</string>
     <string name="result_icon">result_icon</string>
     <string name="game_started_player_a_go">Game started! Player A, go!</string>
+    <string name="player_1_go">Player A, go!</string>
+    <string name="player_2_go">Player B, go!</string>
+    <string name="draw">Draw!</string>
+    <string name="player_1_wins">Player A wins!</string>
+    <string name="player_2_won">Player B wins!</string>
 </resources>
