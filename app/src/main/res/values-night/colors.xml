@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#33A6BF</color>
-    <color name="main_background">#33A6BF</color>
+    <color name="main_background">#5D5FEF</color>
     <color name="item_color">#C4C4C4</color>
     <color name="new_game_button">#33A6BF</color>
     <color name="field_background">#391898</color>

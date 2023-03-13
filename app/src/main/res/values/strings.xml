@@ -3,4 +3,5 @@
     <string name="item">item</string>
     <string name="new_game">New game</string>
     <string name="result_icon">result_icon</string>
+    <string name="game_started_player_a_go">Game started! Player A, go!</string>
 </resources>

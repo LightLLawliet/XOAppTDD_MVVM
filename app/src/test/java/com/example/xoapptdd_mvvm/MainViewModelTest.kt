@@ -14,40 +14,46 @@ class MainViewModelTest {
         val interactor = MainInteractor.Base()
         val viewModel = MainViewModel(communicationResult, communicationUpdate, interactor)
 
-        viewModel.tap(CellId.upLeft)
+        viewModel.tap(CellId.UpLeft)
         assertEquals("Player B, go!", communicationResult.text)
         assertEquals(
-            CellUi.X(CellId.upLeft),
+            CellUi.X(CellId.UpLeft),
             communicationUpdate.value
         )
 
-        viewModel.tap(CellId.upMiddle)
+        viewModel.tap(CellId.UpMiddle)
         assertEquals("Player A, go!", communicationResult.text)
         assertEquals(
-            CellUi.O(CellId.upMiddle),
+            CellUi.O(CellId.UpMiddle),
             communicationUpdate.value
         )
 
-        viewModel.tap(CellId.middleMiddle)
+        viewModel.tap(CellId.MiddleMiddle)
         assertEquals("Player B, go!", communicationResult.text)
         assertEquals(
-            CellUi.X(CellId.middleMiddle),
+            CellUi.X(CellId.MiddleMiddle),
             communicationUpdate.value
         )
 
-        viewModel.tap(CellId.middleRight)
+        viewModel.tap(CellId.MiddleRight)
         assertEquals("Player A, go!", communicationResult.text)
         assertEquals(
-            CellUi.O(CellId.middleRight),
+            CellUi.O(CellId.MiddleRight),
             communicationUpdate.value
         )
 
-        viewModel.tap(CellId.bottomRight)
+        viewModel.tap(CellId.BottomRight)
         assertEquals("Player A wins!", communicationResult.text)
         assertEquals(
-            CellUi.X(CellId.bottomRight),
+            CellUi.X(CellId.BottomRight),
             communicationUpdate.value
         )
+        assertEquals(5, communicationResult.count)
+        assertEquals(5, communicationUpdate.count)
+
+        viewModel.tap(CellId.BottomLeft)
+        assertEquals(5, communicationResult.count)
+        assertEquals(5, communicationUpdate.count)
     }
 
     @Test
@@ -57,16 +63,16 @@ class MainViewModelTest {
         val interactor = MainInteractor.Base()
         val viewModel = MainViewModel(communicationResult, communicationUpdate, interactor)
 
-        viewModel.tap(CellId.upLeft)
+        viewModel.tap(CellId.UpLeft)
         assertEquals("Player B, go!", communicationResult.text)
         assertEquals(1, communicationResult.count)
         assertEquals(
-            CellUi.X(CellId.upLeft),
+            CellUi.X(CellId.UpLeft),
             communicationUpdate.value
         )
         assertEquals(1, communicationUpdate.count)
 
-        viewModel.tap(CellId.upLeft)
+        viewModel.tap(CellId.UpLeft)
         assertEquals(1, communicationResult.count)
         assertEquals(1, communicationUpdate.count)
     }
