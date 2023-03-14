@@ -52,7 +52,7 @@ interface MainInteractor {
                     val rightColumn = repository.winCase(
                         CellId.UpRight,
                         CellId.MiddleRight,
-                        CellId.BottomMiddle
+                        CellId.BottomRight
                     )
                     if (
                         upRow || mIdRow || downRow ||
