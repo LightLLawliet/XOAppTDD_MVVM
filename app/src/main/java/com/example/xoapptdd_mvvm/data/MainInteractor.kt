@@ -17,9 +17,8 @@ interface MainInteractor {
                 if (repository.cellEmpty(cellId)) {
                     repository.updateCell(cellId)
                     var message = repository.updateMessage()
-
                     val upRow = repository.winCase(CellId.UpLeft, CellId.UpMiddle, CellId.UpRight)
-                    val mIdRow = repository.winCase(
+                    val midRow = repository.winCase(
                         CellId.MiddleLeft,
                         CellId.MiddleMiddle,
                         CellId.MiddleRight
@@ -44,7 +43,7 @@ interface MainInteractor {
                         CellId.MiddleLeft,
                         CellId.BottomLeft
                     )
-                    val mIdColumn = repository.winCase(
+                    val midColumn = repository.winCase(
                         CellId.UpMiddle,
                         CellId.MiddleMiddle,
                         CellId.BottomMiddle
@@ -55,20 +54,20 @@ interface MainInteractor {
                         CellId.BottomRight
                     )
                     if (
-                        upRow || mIdRow || downRow ||
+                        upRow || midRow || downRow ||
                         diagonalLeft || diagonalRight ||
-                        leftColumn || rightColumn || mIdColumn
+                        leftColumn || rightColumn || midColumn
                     ) {
                         val firstWon = when {
-                            diagonalLeft || diagonalRight || mIdRow || mIdColumn ->
+                            diagonalLeft || diagonalRight || midRow || midColumn ->
                                 repository.firstPlayerWon(CellId.MiddleMiddle)
                             upRow || leftColumn -> repository.firstPlayerWon(CellId.UpLeft)
-                            upRow || mIdColumn -> repository.firstPlayerWon(CellId.UpMiddle)
+                            upRow || midColumn -> repository.firstPlayerWon(CellId.UpMiddle)
                             upRow || rightColumn -> repository.firstPlayerWon(CellId.UpRight)
-                            mIdRow || leftColumn -> repository.firstPlayerWon(CellId.MiddleLeft)
-                            mIdRow || rightColumn -> repository.firstPlayerWon(CellId.MiddleRight)
+                            midRow || leftColumn -> repository.firstPlayerWon(CellId.MiddleLeft)
+                            midRow || rightColumn -> repository.firstPlayerWon(CellId.MiddleRight)
                             downRow || leftColumn -> repository.firstPlayerWon(CellId.BottomLeft)
-                            downRow || mIdColumn -> repository.firstPlayerWon(CellId.BottomMiddle)
+                            downRow || midColumn -> repository.firstPlayerWon(CellId.BottomMiddle)
                             downRow || rightColumn -> repository.firstPlayerWon(CellId.BottomRight)
                             else -> false
                         }
