@@ -3,7 +3,7 @@ package com.example.xoapptdd_mvvm.data
 import android.widget.ImageButton
 
 abstract class CellOStyle(private val id: CellId) : CellUi() {
-    private val oImageResource = CellImageResource.O()
+    private val oImageResource = CellImageResource.OStyle()
 
     override fun map(
         communicationResult: ResultCommunication,

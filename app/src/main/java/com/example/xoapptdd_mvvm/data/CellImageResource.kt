@@ -12,7 +12,7 @@ interface CellImageResource {
         override fun apply(imageView: ImageView) = imageView.setImageResource(id)
     }
 
-    class X : Base(R.drawable.xstyle)
-    class O : Base(R.drawable.ostyle)
+    class XStyle : Base(R.drawable.xstyle)
+    class OStyle : Base(R.drawable.ostyle)
     class Empty : Base(0)
 }

@@ -4,8 +4,8 @@ import android.widget.ImageButton
 
 abstract class CellReset(private val dataMap: Map<CellId, Int>) : CellUi() {
 
-    private val xResource = CellImageResource.X()
-    private val oResource = CellImageResource.O()
+    private val xResource = CellImageResource.XStyle()
+    private val oResource = CellImageResource.OStyle()
     private val emptyResource = CellImageResource.Empty()
 
     override fun map(

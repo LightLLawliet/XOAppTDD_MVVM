@@ -14,7 +14,9 @@ interface Communication<T> {
 
         private val liveData = MutableLiveData<T>()
 
-        override fun map(data: T) = liveData.setValue(data)
+        override fun map(data: T) {
+            liveData.value = data
+        }
 
         override fun observe(owner: LifecycleOwner, observer: Observer<T>) =
             liveData.observe(owner, observer)

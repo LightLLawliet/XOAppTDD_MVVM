@@ -17,7 +17,11 @@ interface MainInteractor {
                 if (repository.cellEmpty(cellId)) {
                     repository.updateCell(cellId)
                     var message = repository.updateMessage()
-                    val upRow = repository.winCase(CellId.UpLeft, CellId.UpMiddle, CellId.UpRight)
+                    val upRow = repository.winCase(
+                        CellId.UpLeft,
+                        CellId.UpMiddle,
+                        CellId.UpRight
+                    )
                     val midRow = repository.winCase(
                         CellId.MiddleLeft,
                         CellId.MiddleMiddle,
